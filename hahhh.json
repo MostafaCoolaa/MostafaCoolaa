@@ -22,7 +22,7 @@
       "resource": {
         "resourceType": "Immunization",
         "meta": {
-          "security": [{"system": http://hl7.org/fhir/sid/cvx", "code": "207"}]
+          "security": [{"system": "http://hl7.org/fhir/sid/cvx", "code": "207"}]
         },
         "status": "completed",
         "vaccineCode": {
