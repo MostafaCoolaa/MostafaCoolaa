@@ -1,104 +1,122 @@
 {
-  "resourceType": "Bundle",
-  "type": "Collection",
-  "entry": [
-    {
-      "resource": {
-        "resourceType": "Patient",
-        "name": [
-          {
-            "family": [
-              "Fayad"
-            ],
-            "given": [
-              "Hussein"
+   "iss": "https://covid19.quebec.ca/PreuveVaccinaleApi/issuer",
+   "iat": 1629908265,
+   "vc": {
+      "@context": [
+         "https://www.w3.org/2018/credentials/v1"
+      ],
+      "type": [
+         "VerifiableCredential",
+         "https://smarthealth.cards#health-card",
+         "https://smarthealth.cards#immunization",
+         "https://smarthealth.cards#covid19"
+      ],
+      "credentialSubject": {
+         "fhirVersion": "1.0.2",
+         "fhirBundle": {
+            "resourceType": "Bundle",
+            "type": "Collection",
+            "entry": [
+               {
+                  "resource": {
+                     "resourceType": "Patient",
+                     "name": [
+                        {
+                           "family": [
+                              "Fayad"
+                           ],
+                           "given": [
+                              "Hussein"
+                           ]
+                        }
+                     ],
+                     "birthDate": "1996-03-07"
+                  }
+               },
+               {
+                  "resource": {
+                     "resourceType": "Immunization",
+                     "vaccineCode": {
+                        "coding": [
+                           {
+                              "system": "http://hl7.org/fhir/sid/cvx",
+                              "code": "207"
+                           }
+                        ]
+                     },
+                     "patient": {
+                        "reference": "resource:0"
+                     },
+                     "lotNumber": "300042698",
+                     "status": "Completed",
+                     "occurrenceDateTime": "2021-01-18T05:00:00+00:00",
+                     "location": {
+                        "reference": "resource:0",
+                        "display": "18 CMC DE CHISASIBI (CONSEIL CRI)"
+                     },
+                     "protocolApplied": {
+                        "doseNumber": 1,
+                        "targetDisease": {
+                           "coding": [
+                              {
+                                 "system": "http://browser.ihtsdotools.org/?perspective=full&conceptId1=840536004",
+                                 "code": "840536004"
+                              }
+                           ]
+                        }
+                     },
+                     "note": [
+                        {
+                           "text": "MOD COVID-19"
+                        }
+                     ],
+                     "reported": false,
+                     "wasNotGiven": false
+                  }
+               },
+               {
+                  "resource": {
+                     "resourceType": "Immunization",
+                     "vaccineCode": {
+                        "coding": [
+                           {
+                              "system": "http://hl7.org/fhir/sid/cvx",
+                              "code": "207"
+                           }
+                        ]
+                     },
+                     "patient": {
+                        "reference": "resource:0"
+                     },
+                     "lotNumber": "3002179",
+                     "status": "Completed",
+                    " occurrenceDateTime": "2021-05-04T04:00:00+00:00",
+                     "location": {
+                        "reference": "resource:0",
+                        "display": "06 CLINIQUE DE VACCINATION DE AHUNTSIC"
+                     },
+                     "protocolApplied": {
+                        "doseNumber": 2,
+                        "targetDisease": {
+                           "coding": [
+                              {
+                                 "system": "http://browser.ihtsdotools.org/?perspective=full&conceptId1=840536004",
+                                 "code": "840536004"
+                              }
+                           ]
+                        }
+                     },
+                     "note": [
+                        {
+                           "text": "MOD COVID-19"
+                        }
+                     ],
+                     "reported": false,
+                     "wasNotGiven": false
+                  }
+               }
             ]
-          }
-        ],
-        "birthDate": "1996-03-07"
+         }
       }
-    },
-    {
-      "resource": {
-        "resourceType": "Immunization",
-        "vaccineCode": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/sid/cvx",
-              "code": "207"
-            }
-          ]
-        },
-        "patient": {
-          "reference": "resource:0"
-        },
-        "lotNumber": "300042698",
-        "status": "Completed",
-        "occurrenceDateTime": "2021-01-18T05:00:00+00:00",
-        "location": {
-          "reference": "resource:0",
-          "display": "18 CMC DE CHISASIBI (CONSEIL CRI)"
-        },
-        "protocolApplied": {
-          "doseNumber": 1,
-          "targetDisease": {
-            "coding": [
-              {
-                "system": "http://browser.ihtsdotools.org/?perspective=full&conceptId1=840536004",
-                "code": "840536004"
-              }
-            ]
-          }
-        },
-        "note": [
-          {
-            "text": "MOD COVID-19"
-          }
-        ],
-        "reported": false,
-        "wasNotGiven": false
-      }
-    },
-    {
-      "resource": {
-        "resourceType": "Immunization",
-        "vaccineCode": {
-          "coding": [
-            {
-              "system": "http://hl7.org/fhir/sid/cvx",
-              "code": "207"
-            }
-          ]
-        },
-        "patient": {
-          "reference": "resource:0"
-        },
-        "lotNumber": "3002179",
-        "status": "Completed",
-        "occurrenceDateTime": "2021-05-04T04:00:00+00:00",
-        "location": {
-          "reference": "resource:0",
-          "display": "06 CLINIQUE DE VACCINATION DE AHUNTSIC"
-        },
-        "protocolApplied": {
-          "doseNumber": 2,
-          "targetDisease": {
-            "coding": [
-              {
-                "system": "http://browser.ihtsdotools.org/?perspective=full&conceptId1=840536004",
-                "code": "840536004"
-              }
-            ]
-          }
-        },
-        "note": [
-          {
-            "text": "MOD COVID-19"
-          }
-        ],
-        "reported": false,
-        "wasNotGiven": false
-      }
-    }
-  ]
+   }
 }
