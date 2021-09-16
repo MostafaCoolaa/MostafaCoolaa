@@ -3,6 +3,7 @@
   "type": "Collection",
   "entry": [
     {
+      "fullUrl": "resource:0",
       "resource": {
         "resourceType": "Patient",
         "name": [
@@ -19,6 +20,7 @@
       }
     },
     {
+      "fullUrl": "resource:1",
       "resource": {
         "resourceType": "Immunization",
         "vaccineCode": {
@@ -60,6 +62,7 @@
       }
     },
     {
+      "fullUrl": "resource:2",
       "resource": {
         "resourceType": "Immunization",
         "vaccineCode": {
